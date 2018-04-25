@@ -1,0 +1,74 @@
+/** TROP DE PARAMETRE*/
+----------------------------------------------------------------------------------------------------------------
+		// Methode a corriger
+		public Client doThingWithThisClient(Client client, Adresse adresse, Argent argent, boolean isAmoureux, PlatPrefere platPrefere, List<Ami> amis) {
+			// FAIRE PLEIN DE TRUCS AVEC TOUS SES ARGUMENTS
+		}
+
+		public void autreMethodeAppelantCetteMethode(){
+			// AVANT 
+			doThingWithThisClient(client, adresse, argent, isAmoureux, platPrefere,  amis)
+			
+			// APRES : découpe la méthode en regroupant les paramètre par PROBLEMATIQUE
+			defineAndTreatCordonneesAdministratives(client, adresse, argent);
+			defineAndTreatRelationships(client, isAmoureux, amis);
+			defineAndTreatFoodTaste(platPrefere, client)
+		}
+----------------------------------------------------------------------------------------------------------------
+	
+	
+/** NOM NON SIGNIFICATIF*/
+----------------------------------------------------------------------------------------------------------------
+	public void nomNonSignificatif() {
+		// A REMPLACER PAR game ou bowlingGame
+		BowlingGame m = new BowlingGame();
+		
+		// A REMPLACER PAR gameScore ou Score
+		int sapristiSaucisse = m.getScore();
+	}
+----------------------------------------------------------------------------------------------------------------
+
+
+/** NOMS COMPATIBLES AVEC UNE RECHERCHE + NON RESPECT DES NORMES DE NOMMAGES */
+----------------------------------------------------------------------------------------------------------------
+		// NON
+		BowlingGame G_A_M_E;
+		
+		// OUI
+		BowlingGame game;
+----------------------------------------------------------------------------------------------------------------
+	
+	
+/**  METHODE QUI A PLUSIEURS UTILITES + COMMENTAIRES SUPREFLUX */
+----------------------------------------------------------------------------------------------------------------
+
+		// METHODE DE TYPE VOID QUI AFFECTE DES DONNEES EN BASE
+		codeCaca.callWirdMethod(s);
+		
+		// ET ON MET EN FORME LA STRING 
+		s.replace("s", "u");
+		
+		// AVANT DE LA RENVOYER
+		return s.trim();
+		
+		// ICI ON SUPPRIME LES COMMENTAIRES SUPREFLUX (TOUS LE CODE PARLE POUR LUI)
+		// ET ON REDECOUPE LA METHODE EN DEUX METHODE --> 1 
+----------------------------------------------------------------------------------------------------------------
+
+/** AUCUNE VERIFICATION POUR LE CAS NULL */
+----------------------------------------------------------------------------------------------------------------
+	
+	public void exampleMethod(){
+		// AVANT 
+		Classe variable = someRepository.findOne(someId);
+		variable.setMachin(x);
+		
+		// APRES : on verifie maintenant au moins le null
+		Classe variable = someRepository.findOne(someId);
+		if () {
+			variable.setMachin(x);
+		}
+		else {
+			throw new MyError("Oulalala");
+		}
+	}
